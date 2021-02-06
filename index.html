@@ -9,9 +9,13 @@
   <body>
     <h1>Quiz App</h1>
     <div class="countdown-container">
-      <div class="countdown-el hours-c">
+      <div class="countdown-el days">
+        <p class="big-text" id="days">0</p>
+        <span>Days</span>
+      </div>
+      <div class="countdown-el hours">
         <p class="big-text" id="hours">0</p>
-        <span>Hour</span>
+        <span>Hours</span>
       </div>
       <div class="countdown-el minutes">
         <p class="big-text" id="minutes">0</p>
@@ -21,6 +25,30 @@
         <p class="big-text" id="seconds">0</p>
         <span>Sec</span>
       </div>
+    </div>
+    <div class="quiz-container" id="quiz">
+      <div class="quiz-header">
+        <h2 id="question">Question text</h2>
+        <ul>
+          <li>
+            <input type="radio" id="a" name="answer" class="answer" />
+            <label id="a_text" for="a">Question</label>
+          </li>
+          <li>
+            <input type="radio" id="b" name="answer" class="answer" />
+            <label id="b_text" for="b">Question</label>
+          </li>
+          <li>
+            <input type="radio" id="c" name="answer" class="answer" />
+            <label id="c_text" for="c">Question</label>
+          </li>
+          <li>
+            <input type="radio" id="d" name="answer" class="answer" />
+            <label id="d_text" for="d">Question</label>
+          </li>
+        </ul>
+      </div>
+      <button id="submit">Submit</button>
     </div>
   </body>
   <script src="script.js"></script>
