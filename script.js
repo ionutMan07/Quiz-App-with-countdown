@@ -3,7 +3,7 @@ const hoursEl = document.getElementById('hours');
 const minutesEl = document.getElementById('minutes');
 const secondEl = document.getElementById('seconds');
 
-const timer = '27 Jan 2022';
+const timer = '10 feb 2021 02:30 ';
 
 function countdown() {
   const newYearDate = new Date(timer);
@@ -27,26 +27,52 @@ countdown();
 
 setInterval(countdown, 1000);
 
+function startTimer(duration, display) {
+  var timer = duration,
+    minutes,
+    seconds;
+  setInterval(function () {
+    minutes = parseInt(timer / 60, 10);
+    seconds = parseInt(timer % 60, 10);
+
+    minutes = minutes < 10 ? '0' + minutes : minutes;
+    seconds = seconds < 10 ? '0' + seconds : seconds;
+
+    display.textContent = minutes + ':' + seconds;
+
+    if (--timer < 0) {
+      timer = duration;
+    }
+  }, 1000);
+}
+
+window.onload = function () {
+  var fiveMinutes = 60 * 45,
+    display = document.querySelector('#time');
+  startTimer(fiveMinutes, display);
+};
+
 // quiz
 
 const quizData = [
   {
-    question: 'What is the most used programming language in 2019?',
+    question: 'How do you select in CSS an element with id "test"?',
     type: 'radio',
-    a: 'Java',
-    b: 'C',
-    c: 'Python',
-    d: 'JavaScript',
-    correct: 'd',
+    a: '.test',
+    b: 'test',
+    c: '#test',
+    d: 'id=test',
+    correct: 'c',
   },
   {
-    question: 'Who is the President of US?',
+    question: 'What is the shorthand for an element with border as fallows: ',
+    code: 'Top=7px, Bottom=15px, Left=1px, Right=20px?',
     type: 'radio',
-    a: 'Florin Pop',
-    b: 'Donald Trump',
-    c: 'Ivan Saldano',
-    d: 'Mihai Andrei',
-    correct: 'b',
+    a: 'border-width: 7px 20px 15px 1px',
+    b: 'border-width: 15px 20px 7px 1px',
+    c: 'border-width: 7px 20px 1px 15px',
+    d: 'border-width: 7px 15px 20px 1px',
+    correct: 'a',
   },
   {
     question: 'What does HTML stand for?',
@@ -66,10 +92,200 @@ const quizData = [
     d: 'none of the above',
     correct: 'b',
   },
+  {
+    question: 'What does HTML stand for?',
+    type: 'radio',
+    a: 'Hypertext Markup Language',
+    b: 'Cascading Style Sheet',
+    c: 'Jason Object Notation',
+    d: 'Helicopters Terminals Motorboats Lamborginis',
+    correct: 'a',
+  },
+  {
+    question: 'What does HTML stand for?',
+    type: 'radio',
+    a: 'Hypertext Markup Language',
+    b: 'Cascading Style Sheet',
+    c: 'Jason Object Notation',
+    d: 'Helicopters Terminals Motorboats Lamborginis',
+    correct: 'a',
+  },
+  {
+    question: 'What does HTML stand for?',
+    type: 'radio',
+    a: 'Hypertext Markup Language',
+    b: 'Cascading Style Sheet',
+    c: 'Jason Object Notation',
+    d: 'Helicopters Terminals Motorboats Lamborginis',
+    correct: 'a',
+  },
+  {
+    question: 'What does HTML stand for?',
+    type: 'radio',
+    a: 'Hypertext Markup Language',
+    b: 'Cascading Style Sheet',
+    c: 'Jason Object Notation',
+    d: 'Helicopters Terminals Motorboats Lamborginis',
+    correct: 'a',
+  },
+  {
+    question: 'What does HTML stand for?',
+    type: 'radio',
+    a: 'Hypertext Markup Language',
+    b: 'Cascading Style Sheet',
+    c: 'Jason Object Notation',
+    d: 'Helicopters Terminals Motorboats Lamborginis',
+    correct: 'a',
+  },
+  {
+    question: 'What does HTML stand for?',
+    type: 'radio',
+    a: 'Hypertext Markup Language',
+    b: 'Cascading Style Sheet',
+    c: 'Jason Object Notation',
+    d: 'Helicopters Terminals Motorboats Lamborginis',
+    correct: 'a',
+  },
+  {
+    question: 'What does HTML stand for?',
+    type: 'radio',
+    a: 'Hypertext Markup Language',
+    b: 'Cascading Style Sheet',
+    c: 'Jason Object Notation',
+    d: 'Helicopters Terminals Motorboats Lamborginis',
+    correct: 'a',
+  },
+  {
+    question: 'What does HTML stand for?',
+    type: 'radio',
+    a: 'Hypertext Markup Language',
+    b: 'Cascading Style Sheet',
+    c: 'Jason Object Notation',
+    d: 'Helicopters Terminals Motorboats Lamborginis',
+    correct: 'a',
+  },
+  {
+    question: 'What does HTML stand for?',
+    type: 'radio',
+    a: 'Hypertext Markup Language',
+    b: 'Cascading Style Sheet',
+    c: 'Jason Object Notation',
+    d: 'Helicopters Terminals Motorboats Lamborginis',
+    correct: 'a',
+  },
+  {
+    question: 'What does HTML stand for?',
+    type: 'radio',
+    a: 'Hypertext Markup Language',
+    b: 'Cascading Style Sheet',
+    c: 'Jason Object Notation',
+    d: 'Helicopters Terminals Motorboats Lamborginis',
+    correct: 'a',
+  },
+  {
+    question: 'What does HTML stand for?',
+    type: 'radio',
+    a: 'Hypertext Markup Language',
+    b: 'Cascading Style Sheet',
+    c: 'Jason Object Notation',
+    d: 'Helicopters Terminals Motorboats Lamborginis',
+    correct: 'a',
+  },
+  {
+    question: 'What does HTML stand for?',
+    type: 'radio',
+    a: 'Hypertext Markup Language',
+    b: 'Cascading Style Sheet',
+    c: 'Jason Object Notation',
+    d: 'Helicopters Terminals Motorboats Lamborginis',
+    correct: 'a',
+  },
+  {
+    question: 'What does HTML stand for?',
+    type: 'radio',
+    a: 'Hypertext Markup Language',
+    b: 'Cascading Style Sheet',
+    c: 'Jason Object Notation',
+    d: 'Helicopters Terminals Motorboats Lamborginis',
+    correct: 'a',
+  },
+  {
+    question: 'What does HTML stand for?',
+    type: 'radio',
+    a: 'Hypertext Markup Language',
+    b: 'Cascading Style Sheet',
+    c: 'Jason Object Notation',
+    d: 'Helicopters Terminals Motorboats Lamborginis',
+    correct: 'a',
+  },
+  {
+    question: 'What does HTML stand for?',
+    type: 'radio',
+    a: 'Hypertext Markup Language',
+    b: 'Cascading Style Sheet',
+    c: 'Jason Object Notation',
+    d: 'Helicopters Terminals Motorboats Lamborginis',
+    correct: 'a',
+  },
+  {
+    question: 'What does HTML stand for?',
+    type: 'radio',
+    a: 'Hypertext Markup Language',
+    b: 'Cascading Style Sheet',
+    c: 'Jason Object Notation',
+    d: 'Helicopters Terminals Motorboats Lamborginis',
+    correct: 'a',
+  },
+  {
+    question: 'What does HTML stand for?',
+    type: 'radio',
+    a: 'Hypertext Markup Language',
+    b: 'Cascading Style Sheet',
+    c: 'Jason Object Notation',
+    d: 'Helicopters Terminals Motorboats Lamborginis',
+    correct: 'a',
+  },
+  {
+    question: 'What does HTML stand for?',
+    type: 'radio',
+    a: 'Hypertext Markup Language',
+    b: 'Cascading Style Sheet',
+    c: 'Jason Object Notation',
+    d: 'Helicopters Terminals Motorboats Lamborginis',
+    correct: 'a',
+  },
+  {
+    question: 'What does HTML stand for?',
+    type: 'radio',
+    a: 'Hypertext Markup Language',
+    b: 'Cascading Style Sheet',
+    c: 'Jason Object Notation',
+    d: 'Helicopters Terminals Motorboats Lamborginis',
+    correct: 'a',
+  },
+  {
+    question: 'What does HTML stand for?',
+    type: 'radio',
+    a: 'Hypertext Markup Language',
+    b: 'Cascading Style Sheet',
+    c: 'Jason Object Notation',
+    d: 'Helicopters Terminals Motorboats Lamborginis',
+    correct: 'a',
+  },
+  {
+    question: 'What does HTML stand for?',
+    type: 'radio',
+    a: 'Hypertext Markup Language',
+    b: 'Cascading Style Sheet',
+    c: 'Jason Object Notation',
+    d: 'Helicopters Terminals Motorboats Lamborginis',
+    correct: 'a',
+  },
 ];
 const quiz = document.getElementById('quiz');
 const answerEls = document.querySelectorAll('.answer');
 const questionEl = document.getElementById('question');
+const questionCodeEl = document.getElementById('code');
 const a_text = document.getElementById('a_text');
 const b_text = document.getElementById('b_text');
 const c_text = document.getElementById('c_text');
@@ -87,6 +303,7 @@ function loadQuiz() {
   const currentQuizData = quizData[currentQuiz];
 
   questionEl.innerText = currentQuizData.question;
+  questionCodeEl.innerText = currentQuizData.code || ' ';
   a_text.innerText = currentQuizData.a;
   b_text.innerText = currentQuizData.b;
   c_text.innerText = currentQuizData.c;
